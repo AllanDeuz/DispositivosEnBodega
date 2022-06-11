@@ -9,4 +9,10 @@ class Dispositivos extends Model
 {
     use HasFactory;
     protected $fillable = ['nombre', 'marca', 'modelo'];
+
+
+    public function haciaBodega()
+    {
+        return $this->belongsToMany(Bodega::class, 'bodega_dispositivos');
+    }
 }
