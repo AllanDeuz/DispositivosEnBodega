@@ -42,6 +42,5 @@ class RelacionController extends Controller
     public function destroy($id)
     {
         $bodegaDispositivo = BodegaDispositivo::destroy($id);
-        return $bodegaDispositivo;
     }
 }
