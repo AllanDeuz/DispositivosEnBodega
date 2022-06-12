@@ -1,21 +1,18 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import VerDispositivos from './components/VerDispositivos';
+import AgregarDispositivo from './components/AgregarDispositivo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<VerDispositivos />} />
+          <Route path="/create" element={<AgregarDispositivo />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
