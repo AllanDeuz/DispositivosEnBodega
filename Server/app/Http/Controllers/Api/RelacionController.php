@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\BodegaDispositivo;
+use App\Models\Dispositivos;
+use App\Models\Bodega;
 
 class RelacionController extends Controller
 {
@@ -29,18 +31,19 @@ class RelacionController extends Controller
         return $bodegaDispositivo;
     }
 
-    public function update(Request $request, $id)
-    {
-        $bodegaDispositivo = BodegaDispositivo::find($id);
-        $bodegaDispositivo->bodega_id = $request->bodega_id;
-        $bodegaDispositivo->dispositivo_id = $request->dispositivo_id;
-
-        $bodegaDispositivo->save();
-        return $bodegaDispositivo;
-    }
-
     public function destroy($id)
     {
         $bodegaDispositivo = BodegaDispositivo::destroy($id);
+    }
+
+    public function infoProducto(){
+        $dispositivo = Dispositivos::find(1);
+        
+        $bodegaDispositivo = BodegaDispositivo::find(4);
+
+        $registro = $dispositivo->bodegas;
+        
+        //retornar todos los datos del dispositivo y el nombre de la bodega
+        return $registro;
     }
 }

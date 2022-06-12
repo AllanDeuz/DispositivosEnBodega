@@ -10,7 +10,7 @@ class Bodega extends Model
     use HasFactory;
     protected $fillable = ['nombre'];
 
-    public function dispositivosEnBodega()
+    public function dispositivos()
     {
         return $this->belongsToMany(Dispositivos::class, 'bodega_dispositivos');
     }

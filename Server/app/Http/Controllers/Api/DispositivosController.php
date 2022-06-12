@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Dispositivos;
+use App\Models\Bodega;
+use App\Models\BodegaDispositivo;
 
 class DispositivosController extends Controller
 {
@@ -47,5 +49,20 @@ class DispositivosController extends Controller
     {
         $dispositivo = Dispositivos::destroy($id);
         return $dispositivo;
+    }
+
+    public function enBodega()
+    {
+        $dispositivo = Dispositivos::find(1);
+        $bodega = Bodega::find(2);
+        $bodegaDispositivo = BodegaDispositivo::find(4);
+
+        if ($bodega->id == $bodegaDispositivo->bodega_id) {
+            if ($dispositivo->id == $bodegaDispositivo->dispositivo_id) {
+                return $bodega->nombre;
+            } else {
+                return "El dispositivo no esta en la bodega";
+            }
+        }
     }
 }

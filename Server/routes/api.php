@@ -17,6 +17,7 @@ Route::controller(DispositivosController::class)->group(function (){
     Route::get('/dispositivo/{id}', 'show');
     Route::put('/dispositivo/{id}', 'update');
     Route::delete('/dispositivo/{id}', 'destroy');
+    Route::get('/dipsfull', 'enBodega');
 });
 
 Route::controller(BodegaController::class)->group(function (){
@@ -31,6 +32,6 @@ Route::controller(RelacionController::class)->group(function (){
     Route::get('/enbodegas', 'index');
     Route::post('/enbodega', 'store');
     Route::get('/enbodega/{id}', 'show');
-    Route::put('/enbodega/{id}', 'update');
     Route::delete('/enbodega/{id}', 'destroy');
+    Route::get('/enbodegasfull', 'infoProducto');
 });
