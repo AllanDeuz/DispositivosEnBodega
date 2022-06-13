@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+
 
 const endpoint = 'http://localhost:8000/api'
 
@@ -15,6 +16,8 @@ const DispositivosEnBodega = () => {
     const [modelo, setModelo] = useState([])
     const [modelos, setModelos] = useState([])
 
+    const navigate = useNavigate()
+
     const bodegasIngresadas = async () => {
         const response = await axios.get(`${endpoint}/bodegas`)
         setBodegas(response.data)
@@ -23,29 +26,34 @@ const DispositivosEnBodega = () => {
     const getAllDispositivosEnBodega = async () => {
         const response = await axios.get(`${endpoint}/verbodegas`)
         setDispositivosEnBodega(response.data)
+        navigate('/')
     }
 
     const deleteDispositivoEnBodega = async (id) => {
         await axios.delete(`${endpoint}/enbodega/${id}`)
         getAllDispositivosEnBodega()
+        navigate('/')
     }
 
     const getDispositivosBodega = async (e) => {
         e.preventDefault()
         const response = await axios.get(`${endpoint}/filtrobodega/${bodega_id}`)
         setDispositivosEnBodega(response.data)
+        navigate('/')
     }
 
     const getDispositivosMarca = async (e) => {
         e.preventDefault()
         const response = await axios.get(`${endpoint}/filtromarca/${marca}`)
         setDispositivosEnBodega(response.data)
+        navigate('/')
     }
 
     const getDispositivosModelo = async (e) => {
         e.preventDefault()
         const response = await axios.get(`${endpoint}/filtromodelo/${modelo}`)
         setDispositivosEnBodega(response.data)
+        navigate('/')
     }
 
     const getMarcas = async () => {
