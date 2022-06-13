@@ -18,6 +18,11 @@ Route::controller(DispositivosController::class)->group(function (){
     Route::put('/dispositivo/{id}', 'update');
     Route::delete('/dispositivo/{id}', 'destroy');
     Route::get('/verbodegas', 'enBodega');
+    Route::get('filtrobodega/{bodega_id}', 'filtroBodega');
+    Route::get('filtromarca/{marca}', 'filtroMarca');
+    Route::get('marcas', 'marcas');
+    Route::get('modelos', 'modelos');
+    Route::get('filtromodelo/{modelo}', 'filtroModelo');
     Route::get('/verbodega/{id}', 'estaBodega');
 });
 
@@ -34,5 +39,4 @@ Route::controller(RelacionController::class)->group(function (){
     Route::post('/enbodega', 'store');
     Route::get('/enbodega/{id}', 'show');
     Route::delete('/enbodega/{id}', 'destroy');
-    Route::get('/enbodegasfull', 'infoProducto');
 });

@@ -35,15 +35,4 @@ class RelacionController extends Controller
     {
         $bodegaDispositivo = BodegaDispositivo::destroy($id);
     }
-
-    public function infoProducto(){
-        $dispositivo = Dispositivos::find(1);
-        
-        $bodegaDispositivo = BodegaDispositivo::find(4);
-
-        $registro = $dispositivo->bodegas;
-        
-        //retornar todos los datos del dispositivo y el nombre de la bodega
-        return $registro;
-    }
 }
