@@ -24,6 +24,71 @@
   color: white;
 }
 
+/* mis estilos */
+
+.form-control {
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+}
+
+/*Boton agregar dispositivo a bodega*/
+a.btn.btn-success.btn-lg.mt-2.mb-2.text-white {
+  width: 100%;
+  margin: auto;
+}
+
+/*quiero una variable que pueda llamar = 900px*/
+@media (max-width: 30em) {
+
+  table{
+    width: 100%;
+  }
+
+  table tr {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  td.accion {
+    border: 1px dashed;
+  }
+
+  table td[data-titulo]{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  table td[data-titulo]::before{
+    content: attr(data-titulo);
+    font-weight: bold;
+    color:rgb(3, 18, 148);
+    width: 106px;
+  }
+
+  table tr td {
+    border: 1px solid rgb(0, 0, 0);
+    margin: 1px;
+  }
+
+  table thead {
+    display: none;
+  }
+
+}
+
+
+
+div.tablaPrincipal{
+  width: 100%;
+  margin: auto;
+}
+
+/*fin mis estilos*/
+
+
 .App-link {
   color: #61dafb;
 }
