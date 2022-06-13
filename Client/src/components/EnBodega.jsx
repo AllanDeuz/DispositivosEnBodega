@@ -8,10 +8,6 @@ const endpoint = 'http://localhost:8000/api'
 const EnBodega = () => {
   const [dispositivosEnBodega, setDispositivosEnBodega] = useState([])
 
-  useEffect(() => {
-    getAllDispositivosEnBodega()
-  }, [])
-
   const getAllDispositivosEnBodega = async () => {
     const response = await axios.get(`${endpoint}/enbodegas`)
     setDispositivosEnBodega(response.data)
@@ -21,6 +17,10 @@ const EnBodega = () => {
     await axios.delete(`${endpoint}/enbodega/${id}`)
     getAllDispositivosEnBodega()
   }
+
+  useEffect(() => {
+    getAllDispositivosEnBodega()
+  }, [])
 
   return (
     <div>

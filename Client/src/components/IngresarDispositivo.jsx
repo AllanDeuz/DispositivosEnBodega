@@ -11,6 +11,12 @@ const IngresarDispositivo = () => {
     const [bodega_id, setBodega_id] = useState([])
     const [dispositivo_id, setDispositivo_id] = useState([])
     const [dispositivos, setDispositivos] = useState([])
+    const [bodegas, setBodegas] = useState([])
+
+    const bodegasIngresadas = async () => {
+        const response = await axios.get(`${endpoint}/bodegas`)
+        setBodegas(response.data)
+    }
 
     const dispositivosIngresados = async () => {
         const response = await axios.get(`${endpoint}/dispositivos`)
@@ -18,11 +24,13 @@ const IngresarDispositivo = () => {
     }
 
     useEffect(() => {
+        bodegasIngresadas()
         dispositivosIngresados()
     }
     , [])
 
     const navigate = useNavigate()
+
     const ingresoEnBodega = async (e) => {
         e.preventDefault()
         await axios.post(`${endpoint}/enbodega`, {
@@ -34,26 +42,25 @@ const IngresarDispositivo = () => {
 
     return (
         <div>
-            <h3>Ingresar producto en bodega</h3>
+            <h3>Ingresar dispositivo en bodega</h3>
             <form onSubmit={ingresoEnBodega}> 
                 <div className="form-group">
                     
-                    <label className='form-label'>Bodega</label>
+                    <label className='form-label'>Bodegas</label>
 
                     <select className="form-control" onChange={(e) => setBodega_id(e.target.value)}>
                         <option value="">Seleccione una bodega</option>
-                        <option value="1">Bodega 1</option>
-                        <option value="2">Bodega 2</option>
-                        <option value="3">Bodega 3</option>
+                        {bodegas.map( (bodega) => (
+                            <option key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
+                        ))}
                     </select>
 
-                    <label className='form-label'>Dispositivo</label>
+                    <label className='form-label'>Dispositivos</label>
 
                     <select className="form-control" onChange={(e) => setDispositivo_id(e.target.value)}>
                     <option value="">Seleccione un dispositivo</option>
                         {dispositivos.map( (dispositivo) => (
-                            <option key={dispositivo.id} value={dispositivo.id}>{dispositivo.nombre}</option>
-
+                            <option key={dispositivo.id} value={dispositivo.id}>{dispositivo.nombre} {dispositivo.marca} {dispositivo.modelo}</option>
                         ))}
                     </select>
                 </div>
