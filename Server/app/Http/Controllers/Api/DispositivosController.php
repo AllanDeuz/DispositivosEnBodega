@@ -52,17 +52,26 @@ class DispositivosController extends Controller
     }
 
     public function enBodega()
-    {
-        $dispositivo = Dispositivos::find(1);
-        $bodega = Bodega::find(2);
-        $bodegaDispositivo = BodegaDispositivo::find(4);
+    {   
+        $dispositivos = Dispositivos::all();
+        $bodegas = Bodega::all();
+        $bodegaDispositivos = BodegaDispositivo::all();
 
-        if ($bodega->id == $bodegaDispositivo->bodega_id) {
-            if ($dispositivo->id == $bodegaDispositivo->dispositivo_id) {
-                return $bodega->nombre;
-            } else {
-                return "El dispositivo no esta en la bodega";
-            }
-        }
+        //SELECT bodega_dispositivos.id, dispositivos.nombre, dispositivos.marca, dispositivos.modelo, bodegas.nombre 
+        //FROM bodegas, bodega_dispositivos, dispositivos
+        //WHERE bodegas.id = bodega_dispositivos.bodega_id
+        //AND dispositivos.id = bodega_dispositivos.dispositivo_id
+
+        $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
+        ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
+        ->get();
+
+        return $dispositivosEnBodega;
+    }
+
+    public function estaBodega($id)
+    {
+        $bodegaDispositivo = Dispositivos::find($id);
+        return $bodegaDispositivo;
     }
 }

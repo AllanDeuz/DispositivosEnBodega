@@ -17,7 +17,8 @@ Route::controller(DispositivosController::class)->group(function (){
     Route::get('/dispositivo/{id}', 'show');
     Route::put('/dispositivo/{id}', 'update');
     Route::delete('/dispositivo/{id}', 'destroy');
-    Route::get('/dipsfull', 'enBodega');
+    Route::get('/verbodegas', 'enBodega');
+    Route::get('/verbodega/{id}', 'estaBodega');
 });
 
 Route::controller(BodegaController::class)->group(function (){
