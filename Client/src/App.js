@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import DispositivosEnBodega from './components/DispositivosEnBodega';
-import AgregarDispositivo from './components/AgregarDispositivo';
+import IngresarDispositivo from './components/IngresarDispositivo';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DispositivosEnBodega />} />
-          <Route path="/create" element={<AgregarDispositivo />} />
+          <Route path="/ingresar" element={<IngresarDispositivo />} />
         </Routes>
       </BrowserRouter>
     </div>

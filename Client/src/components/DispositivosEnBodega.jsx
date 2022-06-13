@@ -3,10 +3,6 @@ import axios from 'axios'
 
 import {Link} from 'react-router-dom'
 
-import EnBodega from './EnBodega'
-import VerDispositivos from './VerDispositivos'
-
-
 const endpoint = 'http://localhost:8000/api'
 
 const DispositivosEnBodega = () => {
@@ -18,7 +14,7 @@ const DispositivosEnBodega = () => {
     }, [])
 
     const getAllDispositivosEnBodega = async () => {
-        const response = await axios.get(`${endpoint}/enbodegas`)
+        const response = await axios.get(`${endpoint}/verbodegas`)
         setDispositivosEnBodega(response.data)
     }
 
@@ -27,46 +23,45 @@ const DispositivosEnBodega = () => {
         getAllDispositivosEnBodega()
     }
 
-  return (
-    <div>
-        <div className='d-grid gap-2'>
-            <Link to="/create" className="btn btn-success btn-lg mt-2 mb-2 text-white">Create</Link>
-        </div>
+    return (
+        <div>
+            <div className='d-grid gap-2'>
+                <Link to="/ingresar" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo</Link>
+            </div>
 
-        <table className='table table-striped'>
+            <table className='table table-striped'>
 
-            <thead className='bg-primary text-white'>
-                <tr>
-                    <th>Bodega</th>
-                    <th>Dispositivo</th>
-                    <th>Nombre</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Accion</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                {dispositivosEnBodega.map( (dispositivosEnBodega) => (
-                    <tr key={dispositivosEnBodega.id}>
-                        <td>{dispositivosEnBodega.bodega_id}</td>
-                        <td>{dispositivosEnBodega.dispositivo_id}</td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <Link to={`/edit/${dispositivosEnBodega.id}`} className="btn btn-warning">Edit</Link>
-                            <button onClick={() => deleteDispositivoEnBodega(dispositivosEnBodega.id)} className="btn btn-danger">Delete</button>
-                        </td>
+                <thead className='bg-primary text-white'>
+                    <tr>
+                        <th>ID Dispositivo</th>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Bodega</th>
+                        <th>Accion</th>
                     </tr>
-                ))}
+                </thead>
 
-            </tbody>
+                <tbody>
+                    {dispositivosEnBodega.map(dispositivo => (
+                        <tr key={dispositivo.id}>
+                            <td>{dispositivo.dispositivo_id}</td>
+                            <td>{dispositivo.nombre}</td>
+                            <td>{dispositivo.marca}</td>
+                            <td>{dispositivo.modelo}</td>
+                            <td>{dispositivo.bodega_id}</td>
+                            <td>
+                                <button onClick={() => deleteDispositivoEnBodega(dispositivo.id)} className="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    ))}
 
-        </table>
+                </tbody>
 
-    </div>
-  )
+            </table>
+
+        </div>
+    )
 }
 
 export default DispositivosEnBodega
