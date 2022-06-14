@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 import {useNavigate} from 'react-router-dom'
+import DispositivosIngresados from './DispositivosIngresados'
 
 const endpoint = 'http://localhost:8000/api'
 
@@ -13,7 +14,7 @@ const IngresarDispositivo = () => {
     const [dispositivos, setDispositivos] = useState([])
     const [bodegas, setBodegas] = useState([])
 
-    const bodegasIngresadas = async () => {
+    const getBodegas = async () => {
         const response = await axios.get(`${endpoint}/bodegas`)
         setBodegas(response.data)
     }
@@ -24,10 +25,9 @@ const IngresarDispositivo = () => {
     }
 
     useEffect(() => {
-        bodegasIngresadas()
+        getBodegas()
         dispositivosIngresados()
-    }
-    , [])
+    }, [])
 
     const navigate = useNavigate()
 
@@ -37,16 +37,20 @@ const IngresarDispositivo = () => {
             bodega_id: bodega_id,
             dispositivo_id: dispositivo_id
         })
+        dispositivosIngresados()
         navigate('/')
     }
 
     return (
         <div>
-            <h3>Ingresar dispositivo en bodega</h3>
+
+            <h1>Ingresar dispositivo en bodega</h1>
+
+            <br/>
+            <hr/>
             <form onSubmit={ingresoEnBodega}> 
+
                 <div className="form-group">
-                    
-                    <label className='form-label'>Bodegas</label>
 
                     <select className="form-control" onChange={(e) => setBodega_id(e.target.value)}>
                         <option value="">Seleccione una bodega</option>
@@ -55,7 +59,7 @@ const IngresarDispositivo = () => {
                         ))}
                     </select>
 
-                    <label className='form-label'>Dispositivos</label>
+                    <br/>
 
                     <select className="form-control" onChange={(e) => setDispositivo_id(e.target.value)}>
                     <option value="">Seleccione un dispositivo</option>
@@ -63,10 +67,17 @@ const IngresarDispositivo = () => {
                             <option key={dispositivo.id} value={dispositivo.id}>{dispositivo.nombre} {dispositivo.marca} {dispositivo.modelo}</option>
                         ))}
                     </select>
-                </div>
-                <button type="submit" className="btn btn-primary">Ingresar</button>
-            </form>
 
+                </div>
+                
+                <br/>
+
+                <button type="submit" className="btn btn-success">Ingresar</button>
+
+            </form>
+            <hr/>
+
+            <DispositivosIngresados/>
         </div>
     )
 }

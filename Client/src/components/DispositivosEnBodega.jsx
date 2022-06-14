@@ -18,15 +18,9 @@ const DispositivosEnBodega = () => {
 
     const navigate = useNavigate()
 
-    const bodegasIngresadas = async () => {
-        const response = await axios.get(`${endpoint}/bodegas`)
-        setBodegas(response.data)
-    }
-
     const getAllDispositivosEnBodega = async () => {
         const response = await axios.get(`${endpoint}/verbodegas`)
         setDispositivosEnBodega(response.data)
-        navigate('/')
     }
 
     const deleteDispositivoEnBodega = async (id) => {
@@ -39,21 +33,23 @@ const DispositivosEnBodega = () => {
         e.preventDefault()
         const response = await axios.get(`${endpoint}/filtrobodega/${bodega_id}`)
         setDispositivosEnBodega(response.data)
-        navigate('/')
     }
 
     const getDispositivosMarca = async (e) => {
         e.preventDefault()
         const response = await axios.get(`${endpoint}/filtromarca/${marca}`)
         setDispositivosEnBodega(response.data)
-        navigate('/')
     }
 
     const getDispositivosModelo = async (e) => {
         e.preventDefault()
         const response = await axios.get(`${endpoint}/filtromodelo/${modelo}`)
         setDispositivosEnBodega(response.data)
-        navigate('/')
+    }
+
+    const getBodegas = async () => {
+        const response = await axios.get(`${endpoint}/bodegas`)
+        setBodegas(response.data)
     }
 
     const getMarcas = async () => {
@@ -67,7 +63,7 @@ const DispositivosEnBodega = () => {
     }
 
     useEffect(() => {
-        bodegasIngresadas()
+        getBodegas()
         getAllDispositivosEnBodega()
         getMarcas()
         getModelos()
@@ -76,56 +72,71 @@ const DispositivosEnBodega = () => {
     return (
         <div className='contenido'>
             <div className='ingresarDisp'>
-                <Link to="/ingresar" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo</Link>
+                <ul className='accionesPrincipales'>
+                    <li>
+                        <Link to="/ingresar" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo a Bodega</Link>
+                    </li>
+                    <li>
+                        <Link to="/ingresar-dispositivo" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo</Link>
+                    </li>
+                </ul>
             </div>
 
             <div className='subcontenido'>
-                <form onSubmit={getAllDispositivosEnBodega}>
-                    <button type="submit" className="btn btn-primary">Todos los dispositivos</button>
-                </form>
 
-                <form onSubmit={getDispositivosBodega}>
-                
-                    <label htmlFor="bodega_id">Bodegas</label>
-                    <select name="bodega_id" id="bodega_id" className="form-control" onChange={(e) => setBodega_id(e.target.value)}>
-                    <option value="">Click para ver bodegas</option>
-                        {bodegas.map( (bodega) => (
-                            <option key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
-                        ))}
-                    </select>
-                    <button type="submit" className="btn btn-primary">Filtrar</button>
+                <div className='filtros'>
+                    <hr/>
+                    <h2>Filtros</h2>
+                    <br/>
 
-                </form>
+                    <form onSubmit={getDispositivosBodega}>
+                    
+                        <select name="bodega_id" id="bodega_id" className="form-control" onChange={(e) => setBodega_id(e.target.value)}>
+                        <option value="">Click para ver bodegas</option>
+                            {bodegas.map( (bodega) => (
+                                <option key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
+                            ))}
+                        </select>
+                        <button type="submit" className="btn btn-primary">Filtrar</button>
 
-                <form onSubmit={getDispositivosMarca}>
-                    <label htmlFor="marca_id">Marcas</label>
-                    <select name="marca_id" id="marca_id" className="form-control" onChange={(e) => setMarca(e.target.value)}>
-                        <option value="">Click para ver marcas</option>
-                        {marcas.map( (marca) => (
-                            <option key={marca.id} value={marca.marca}>{marca.marca}</option>
-                        ))}
-                    </select>
+                    </form>
 
-                    <button type="submit" className="btn btn-primary">Filtrar</button>
+                    <form onSubmit={getDispositivosMarca}>
+                        <select name="marca_id" id="marca_id" className="form-control" onChange={(e) => setMarca(e.target.value)}>
+                            <option value="">Click para ver marcas</option>
+                            {marcas.map( (marca) => (
+                                <option key={marca.id} value={marca.marca}>{marca.marca}</option>
+                            ))}
+                        </select>
 
-                </form>
+                        <button type="submit" className="btn btn-primary">Filtrar</button>
 
-                <form onSubmit={getDispositivosModelo}>
-                    <label htmlFor="modelo_id">Modelos</label>
-                    <select name="modelo_id" id="modelo_id" className="form-control" onChange={(e) => setModelo(e.target.value)}>
-                        <option value="">Click para ver modelos</option>
-                        {modelos.map( (modelo) => (
-                            <option key={modelo.id} value={modelo.modelo}>{modelo.modelo}</option>
-                        ))}
-                    </select>
+                    </form>
 
-                    <button type="submit" className="btn btn-primary">Filtrar</button>
+                    <form onSubmit={getDispositivosModelo}>
 
-                </form>
+                        <select name="modelo_id" id="modelo_id" className="form-control" onChange={(e) => setModelo(e.target.value)}>
+                            <option value="">Click para ver modelos</option>
+                            {modelos.map( (modelo) => (
+                                <option key={modelo.id} value={modelo.modelo}>{modelo.modelo}</option>
+                            ))}
+                        </select>
+
+                        <button type="submit" className="btn btn-primary">Filtrar</button>
+
+                    </form>
+
+                    <br/>
+
+                    <form onSubmit={getAllDispositivosEnBodega}>
+                        <button type="submit" className="btn btn-primary">Todos los dispositivos</button>
+                    </form>
+                </div>
 
                 <div className='tablaPrincipal'>
-
+                    <hr/>
                     <h1>Dispositivos en bodegas</h1>
+                    <br/>
 
                     <table className='table table-striped'>
 

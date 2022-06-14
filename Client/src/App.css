@@ -26,10 +26,51 @@
 
 /* mis estilos */
 
+/*¡La aplicacion es responsive!*/
+
+/*El css se realizo de forma rapida ya que solo es secundario*/
+
+h1 {
+  margin-bottom: 3vh;
+}
+
+h2 {
+  margin-bottom: 3vh;
+}
+
+ul.accionesPrincipales {
+  list-style: none;
+  padding: 0vw;
+  margin-left: 0px;
+}
+
+ul.accionesPrincipales li{
+  height: 55px;
+}
+
+.ingresarDisp{
+  display: flex;
+  flex-direction: column;
+}
+
 .form-control {
   text-align: center;
   margin: auto;
   max-width: 80%;
+}
+
+select.form-control {
+  border: 1px solid #7ca1d5;
+  color: rgb(226, 109, 0);
+}
+
+select.form-control option {
+  border: 1px solid #7ca1d5;
+  color: rgb(226, 109, 0);
+}
+
+table.table.table-striped {
+  background-color: rgb(159 208 255);
 }
 
 /*Boton agregar dispositivo a bodega*/
@@ -38,7 +79,11 @@ a.btn.btn-success.btn-lg.mt-2.mb-2.text-white {
   margin: auto;
 }
 
-/*quiero una variable que pueda llamar = 900px*/
+button.btn.btn-primary {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
 @media (max-width: 30em) {
 
   table{
@@ -79,11 +124,21 @@ a.btn.btn-success.btn-lg.mt-2.mb-2.text-white {
 
 }
 
-
-
 div.tablaPrincipal{
   width: 100%;
   margin: auto;
+}
+
+form.nuevoDispositivo{
+  display: grid;
+  width: 80%;
+  margin: auto;
+}
+
+input[type="text"] {
+  text-align: center;
+  border: 1px solid #7ca1d5;
+  margin-bottom: 1vh;
 }
 
 /*fin mis estilos*/
