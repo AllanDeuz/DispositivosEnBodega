@@ -57,7 +57,9 @@ const DispositivosIngresados = () => {
                 </tbody>
             </table>
 
-            <Link to="/" className="btn btn-success btn-lg mt-2 mb-2 text-white">Volver al inicio</Link>
+            <hr/>
+
+            <Link to="/" className="btn btn-success btn-lg mt-2 mb-2 text-white" id="volverInicio">Volver al inicio</Link>
         </div>
     )
 }

@@ -44,7 +44,7 @@ const IngresarDispositivo = () => {
     return (
         <div>
 
-            <h1>Ingresar dispositivo en bodega</h1>
+            <h1 className='ingreso'>Ingresar dispositivo en bodega</h1>
 
             <br/>
             <hr/>
@@ -52,19 +52,19 @@ const IngresarDispositivo = () => {
 
                 <div className="form-group">
 
-                    <select className="form-control" onChange={(e) => setBodega_id(e.target.value)}>
-                        <option value="">Seleccione una bodega</option>
+                    <select className="form-control" id='verde' onChange={(e) => setBodega_id(e.target.value)}>
+                        <option id='verde2' value="">Seleccione una bodega</option>
                         {bodegas.map( (bodega) => (
-                            <option key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
+                            <option id='verde' key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
                         ))}
                     </select>
 
                     <br/>
 
-                    <select className="form-control" onChange={(e) => setDispositivo_id(e.target.value)}>
-                    <option value="">Seleccione un dispositivo</option>
+                    <select className="form-control" id='verde' onChange={(e) => setDispositivo_id(e.target.value)}>
+                    <option id='verde2' value="">Seleccione un dispositivo</option>
                         {dispositivos.map( (dispositivo) => (
-                            <option key={dispositivo.id} value={dispositivo.id}>{dispositivo.nombre} {dispositivo.marca} {dispositivo.modelo}</option>
+                            <option id='verde' key={dispositivo.id} value={dispositivo.id}>{dispositivo.nombre} {dispositivo.marca} {dispositivo.modelo}</option>
                         ))}
                     </select>
 

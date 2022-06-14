@@ -1,29 +1,6 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 /* mis estilos */
 
 /*¡La aplicacion es responsive!*/
@@ -32,10 +9,20 @@
 
 h1 {
   margin-bottom: 3vh;
+  color: #18335f;
+  text-shadow: 2px 2px 2px #5482CE;
 }
 
 h2 {
   margin-bottom: 3vh;
+  color: #5f3a18;
+  text-shadow: 2px 2px 2px rgba(184, 124, 68, 0.733);
+}
+
+h1.ingreso{
+  margin-bottom: 3vh;
+  color: #185f27;
+  text-shadow: 2px 2px 2px #6f996fb6;
 }
 
 ul.accionesPrincipales {
@@ -61,28 +48,84 @@ ul.accionesPrincipales li{
 
 select.form-control {
   border: 1px solid #7ca1d5;
-  color: rgb(226, 109, 0);
+  font-weight: bold;
+  color: rgb(206, 99, 0);
+  -webkit-box-shadow: 9px 10px 5px 0px rgba(177, 194, 224, 0.808);
+  -moz-box-shadow: 9px 10px 5px 0px rgba(177, 194, 224, 0.808);
+  box-shadow: 9px 10px 5px 0px rgba(177, 194, 224, 0.808);
+
 }
 
 select.form-control option {
   border: 1px solid #7ca1d5;
-  color: rgb(226, 109, 0);
+  color: rgb(199, 110, 26);
+  text-align: center;
+}
+
+select.form-control#verde {
+
+  color: #185f27;
+
+
+}
+
+select.form-control option#verde {
+  color: #34a34c;
+}
+
+select.form-control option#verde2 {
+  /*letra en negrita cursiva y mas grande*/
+  font-weight: bold;
+  font-size: 1.2em;
+
+  color: #34a34c;
 }
 
 table.table.table-striped {
   background-color: rgb(159 208 255);
 }
 
-/*Boton agregar dispositivo a bodega*/
+/*Boton verde*/
 a.btn.btn-success.btn-lg.mt-2.mb-2.text-white {
   width: 100%;
   margin: auto;
 }
 
+a.btn.btn-success.btn-lg.mt-2.mb-2.text-white#volverInicio {
+  background-color: rgb(21, 21, 168);
+}
+
+a.btn.btn-success.btn-lg.mt-2.mb-2.text-white#volverInicio:hover {
+  background-color: rgb(14, 14, 133);
+}
+
 button.btn.btn-primary {
   margin-top: 1%;
   margin-bottom: 1%;
+  -webkit-box-shadow: 8px 6px 5px 0px rgba(177,194,224,1);
+  -moz-box-shadow: 8px 6px 5px 0px rgba(177,194,224,1);
+  box-shadow: 8px 6px 5px 0px rgba(177,194,224,1);
 }
+
+button.btn.btn-primary#filtro {
+
+  background-color: rgb(189, 129, 17);
+  border: rgb(189, 129, 17);
+  -webkit-box-shadow: 8px 6px 5px 0px rgba(184, 124, 68, 0.486);
+  -moz-box-shadow: 8px 6px 5px 0px rgba(184, 124, 68, 0.486);
+  box-shadow: 8px 6px 5px 0px rgba(184, 124, 68, 0.486);
+
+}
+
+button.btn.btn-primary#filtro:hover {
+  background-color: rgb(175, 119, 16);
+}
+
+hr#espacio{
+  color: aliceblue;
+}
+
+/*Diseño responsivo*/
 
 @media (max-width: 30em) {
 
@@ -139,20 +182,7 @@ input[type="text"] {
   text-align: center;
   border: 1px solid #7ca1d5;
   margin-bottom: 1vh;
+  color :#185f27
 }
 
 /*fin mis estilos*/
-
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

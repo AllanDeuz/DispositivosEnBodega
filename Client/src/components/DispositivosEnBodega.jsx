@@ -97,9 +97,14 @@ const DispositivosEnBodega = () => {
                                 <option key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
                             ))}
                         </select>
-                        <button type="submit" className="btn btn-primary">Filtrar</button>
+
+                        <br/>
+
+                        <button type="submit" className="btn btn-primary" id="filtro">Filtrar</button>
 
                     </form>
+
+                    <br/>
 
                     <form onSubmit={getDispositivosMarca}>
                         <select name="marca_id" id="marca_id" className="form-control" onChange={(e) => setMarca(e.target.value)}>
@@ -109,9 +114,13 @@ const DispositivosEnBodega = () => {
                             ))}
                         </select>
 
-                        <button type="submit" className="btn btn-primary">Filtrar</button>
+                        <br/>
+
+                        <button type="submit" className="btn btn-primary" id="filtro">Filtrar</button>
 
                     </form>
+
+                    <br/>
 
                     <form onSubmit={getDispositivosModelo}>
 
@@ -122,14 +131,16 @@ const DispositivosEnBodega = () => {
                             ))}
                         </select>
 
-                        <button type="submit" className="btn btn-primary">Filtrar</button>
+                        <br/>
+
+                        <button type="submit" className="btn btn-primary" id="filtro">Filtrar</button>
 
                     </form>
 
                     <br/>
 
                     <form onSubmit={getAllDispositivosEnBodega}>
-                        <button type="submit" className="btn btn-primary">Todos los dispositivos</button>
+                        <button type="submit" className="btn btn-primary" >Todos los dispositivos en bodega</button>
                     </form>
                 </div>
 

@@ -36,8 +36,7 @@ const IngresarNuevoDispositivo = () => {
     return (
         <div>
 
-            <h1>Ingresar nuevo dispositivo</h1>
-            <br/>
+            <h1 className='ingreso'>Ingresar nuevo dispositivo</h1>
             <hr/>
             <form onSubmit={ingresarDispositivo} className='nuevoDispositivo'>
                 <input type="text" placeholder="Nombre del dispositivo" value={dispositivo.nombre} onChange={(e) => setDispositivo({...dispositivo, nombre: e.target.value})} />
