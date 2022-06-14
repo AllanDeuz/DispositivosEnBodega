@@ -22,7 +22,7 @@ ________________________________________________________________________________
 ### Partes del proyecto:
 
 - __FrontEnd__.
-    __Iniciar el FrontEnd del proyecto__.
+    - __Iniciar el FrontEnd del proyecto__.
     - El FrontEnd se realizo con __Reactjs__ y se encuentra almacenado en el directorio llamado "_Client_".
     - Para ejecutar el FrontEnd debemos seguir los siguientes pasos:
         1. escribir "_cd Client_" en consola de comandos dentro del directorio del proyecto.
