@@ -48,12 +48,14 @@ ________________________________________________________________________________
     - En el archivo "**.env**" se encuentra la siguiente informacion:   
     <br/>      
     +---------------------+
+    <br/>
     - DB_CONNECTION=mysql 
     - DB_HOST=127.0.0.1   
     - DB_PORT=3306        
     - DB_DATABASE=apirest 
     - DB_USERNAME=root    
     - DB_PASSWORD=        
+    <br/>
     +---------------------+
     <br/>
     _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_
