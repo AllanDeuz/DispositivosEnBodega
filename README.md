@@ -55,7 +55,7 @@ ________________________________________________________________________________
     DB_DATABASE=apirest <br/>
     DB_USERNAME=root <br/>
     DB_PASSWORD=
-    +---------------------+
+    <br/>+---------------------+
     <br/>
     _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_
     <br/>
