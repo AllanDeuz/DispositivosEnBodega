@@ -35,7 +35,8 @@ ________________________________________________________________________________
 
 - __BackEnd__.
 
-    Precondiciones: 
+    __Precondiciones__: 
+    <br/>
     **_Se recomienda testear el proyecto en localhost_**
     <br/>
     __Si se usa en _localhost_ entonces:__
