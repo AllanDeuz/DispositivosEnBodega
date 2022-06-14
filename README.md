@@ -43,9 +43,9 @@ ________________________________________________________________________________
     - Se requiere una base de datos mysql llamada: _"apirest"_.
     - Credenciales: username: _"root"_ y password: **Sin password**.
     <br/>
-    __Si se usara otra base de datos o se usan otras credenciales entonces:__ <br/>
-    - Dirigirse al archivo llamado **".env"** en el directorio _"Server"_. <br/>
-    - En el archivo **".env"** se encuentra la siguiente informacion:   
+    **Si se usara otra base de datos o se usan otras credenciales entonces:** <br/>
+    - Dirigirse al archivo llamado __".env"__ en el directorio **"Server"*. <br/>
+    - En el archivo __".env"__ se encuentra la siguiente informacion:   
     <br/>      
     +---------------------+
     <br/>
