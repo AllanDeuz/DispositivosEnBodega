@@ -35,9 +35,11 @@ ________________________________________________________________________________
 
 - __BackEnd__.
 
-    __Precondiciones__: 
+-    __Precondiciones__: 
+    <br/>
     <br/>
     _Se recomienda testear el proyecto en localhost_
+    <br/>
     <br/>
     __Si se usa en _localhost_ entonces:__
     - Se requiere una base de datos mysql llamada: _"apirest"_.
