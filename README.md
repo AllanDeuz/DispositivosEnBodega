@@ -4,18 +4,19 @@
 
 ### Funcionalidades disponibles:
 
-- _Ingresar dispositivo al sistema_.
-- _Ingresar dispositivo en bodega_.
-- _Enlistar dispositivos en sistema_.
-- _Enlistar dipositivos en bodega_.
-- _Aplicacion de filtros_.
-    - _Filtro por bodega_.
-    - _Filtro por marca_.
-    - _Filtro por modelo_.
-    - El sistema detecta todas las bodegas, marcas y modelos ingresados en la base de datos y los enlista como opcion de filtro.
-- _Eliminar dispositivo_.
-- _Eliminar dispositivo de bodega_.
+- Ingresar dispositivo al sistema.
+- Ingresar dispositivo en bodega.
+- Enlistar dispositivos en sistema.
+- Enlistar dipositivos en bodega.
+- Aplicacion de filtros.
+    - Filtro por bodega.
+    - Filtro por marca.
+    - Filtro por modelo.
+    - _El sistema detecta todas las bodegas, marcas y modelos ingresados en la base de datos y los enlista como opcion de filtro._
+- Eliminar dispositivo.
+- Eliminar dispositivo de bodega.
 
+______________________________________________________________________________________________________________________
 ### Partes del proyecto:
 
 - __FrontEnd__.
@@ -29,7 +30,7 @@
     - Para ejecutar el BackEnd debemos seguir los siguientes pasos:
         1. escribir _cd Server_ en consola de comandos dentro del directorio del proyecto.
         2. escribir _php artisan migrate_ en consola de comandos dentro del directorio recien ingresado.
-        2. escribir _php artisan serve_ en consola de comandos dentro del directorio actual.
+        3. escribir _php artisan serve_ en consola de comandos dentro del directorio actual.
 
 - __Consideraciones__.
     - Se tomaron en cuenta las siguientes entiedades y atributos para desarrollar la base de datos:
