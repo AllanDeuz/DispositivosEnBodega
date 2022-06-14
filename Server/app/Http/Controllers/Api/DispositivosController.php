@@ -13,7 +13,7 @@ class DispositivosController extends Controller
 
     public function index()
     {
-        $dispositivos = Dispositivos::all();
+        $dispositivos = Dispositivos::select('*')->orderBy('nombre')->get();
         return $dispositivos;
     }
 
@@ -64,6 +64,7 @@ class DispositivosController extends Controller
 
         $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
         ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
+        ->orderBy('dispositivos.nombre')
         ->get();
 
         return $dispositivosEnBodega;
@@ -132,14 +133,54 @@ class DispositivosController extends Controller
 
     //Seleccionar todas las marcas de los dispositivos
     public function marcas(){
-        $marcas = Dispositivos::select('marca')->distinct()->get();
-        return $marcas;
+
+        $marcas = Dispositivos::select('id', 'marca')->distinct()->orderBy('marca')->get();
+
+        $marcasDistintas = [];
+        $idMarcas = [];
+
+        foreach ($marcas as $marca) {
+            if (!in_array($marca->marca, $marcasDistintas)) {
+                array_push($idMarcas, $marca->id);
+                array_push($marcasDistintas, $marca->marca);
+            }
+        }
+
+        $marcasJson = [];
+        for ($i=0; $i < count($idMarcas); $i++) { 
+            $marcasJson[$i] = [
+                "id" => $idMarcas[$i],
+                "marca" => $marcasDistintas[$i]
+            ];
+        }
+
+        return $marcasJson;
+
     }
 
     //Seleccionar todos los modelos de los dispositivos
     public function modelos(){
-        $modelos = Dispositivos::select('modelo')->distinct()->get();
-        return $modelos;
+        $modelos = Dispositivos::select('id', 'modelo')->distinct()->orderBy('modelo')->get();
+
+        $modelosDistintos = [];
+        $idModelos = [];
+
+        foreach ($modelos as $modelo) {
+            if (!in_array($modelo->modelo, $modelosDistintos)) {
+                array_push($idModelos, $modelo->id);
+                array_push($modelosDistintos, $modelo->modelo);
+            }
+        }
+
+        $modelosJson = [];
+        for ($i=0; $i < count($idModelos); $i++) { 
+            $modelosJson[$i] = [
+                "id" => $idModelos[$i],
+                "modelo" => $modelosDistintos[$i]
+            ];
+        }
+
+        return $modelosJson;
     }
 
     public function estaBodega($id)
