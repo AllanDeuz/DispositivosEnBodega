@@ -37,7 +37,7 @@ ________________________________________________________________________________
 
     __Precondiciones__: 
     <br/>
-    **_Se recomienda testear el proyecto en localhost_**
+    _Se recomienda testear el proyecto en localhost_
     <br/>
     __Si se usa en _localhost_ entonces:__
     - Se requiere una base de datos mysql llamada: "_apirest_".
@@ -45,7 +45,8 @@ ________________________________________________________________________________
     <br/>
     __Si se usara otra base de datos o se usan otras credenciales entonces:__
     - Dirigirse al archivo llamado "**.env**" en el directorio "_Server_".
-    - En el archivo "**.env**" se encuentra la siguiente informacion:         
+    - En el archivo "**.env**" se encuentra la siguiente informacion:   
+    <br/>      
     +---------------------+
     - DB_CONNECTION=mysql 
     - DB_HOST=127.0.0.1   
@@ -55,7 +56,8 @@ ________________________________________________________________________________
     - DB_PASSWORD=        
     +---------------------+
     <br/>
-    **_En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_**
+    _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_
+    <br/>
 - __Si se usa con un servidor externo entonces:__
     - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este.
 
