@@ -92,7 +92,7 @@ const DispositivosEnBodega = () => {
                     <form onSubmit={getDispositivosBodega}>
                     
                         <select name="bodega_id" id="bodega_id" className="form-control" onChange={(e) => setBodega_id(e.target.value)}>
-                        <option value="">Click para ver bodegas</option>
+                        <option value="" id='filtro'>Click para ver bodegas</option>
                             {bodegas.map( (bodega) => (
                                 <option key={bodega.id} value={bodega.id}>{bodega.nombre}</option>
                             ))}
@@ -108,7 +108,7 @@ const DispositivosEnBodega = () => {
 
                     <form onSubmit={getDispositivosMarca}>
                         <select name="marca_id" id="marca_id" className="form-control" onChange={(e) => setMarca(e.target.value)}>
-                            <option value="">Click para ver marcas</option>
+                            <option value="" id='filtro'>Click para ver marcas</option>
                             {marcas.map( (marca) => (
                                 <option key={marca.id} value={marca.marca}>{marca.marca}</option>
                             ))}
@@ -125,7 +125,7 @@ const DispositivosEnBodega = () => {
                     <form onSubmit={getDispositivosModelo}>
 
                         <select name="modelo_id" id="modelo_id" className="form-control" onChange={(e) => setModelo(e.target.value)}>
-                            <option value="">Click para ver modelos</option>
+                            <option value="" id='filtro'>Click para ver modelos</option>
                             {modelos.map( (modelo) => (
                                 <option key={modelo.id} value={modelo.modelo}>{modelo.modelo}</option>
                             ))}

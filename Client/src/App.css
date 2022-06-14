@@ -63,10 +63,7 @@ select.form-control option {
 }
 
 select.form-control#verde {
-
   color: #185f27;
-
-
 }
 
 select.form-control option#verde {
@@ -74,11 +71,15 @@ select.form-control option#verde {
 }
 
 select.form-control option#verde2 {
-  /*letra en negrita cursiva y mas grande*/
   font-weight: bold;
   font-size: 1.2em;
-
   color: #34a34c;
+}
+
+select.form-control option#filtro {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(199, 110, 26);
 }
 
 table.table.table-striped {

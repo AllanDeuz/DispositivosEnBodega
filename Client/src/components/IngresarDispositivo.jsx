@@ -45,8 +45,6 @@ const IngresarDispositivo = () => {
         <div>
 
             <h1 className='ingreso'>Ingresar dispositivo en bodega</h1>
-
-            <br/>
             <hr/>
             <form onSubmit={ingresoEnBodega}> 
 
