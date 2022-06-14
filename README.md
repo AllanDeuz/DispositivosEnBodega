@@ -22,7 +22,9 @@ ________________________________________________________________________________
 ### Partes del proyecto:
 
 - __FrontEnd__.
-    - __Iniciar el FrontEnd del proyecto__.
+
+    __Iniciar el FrontEnd del proyecto__.
+
     - El FrontEnd se realizo con __Reactjs__ y se encuentra almacenado en el directorio llamado "_Client_".
     - Para ejecutar el FrontEnd debemos seguir los siguientes pasos:
         1. escribir "_cd Client_" en consola de comandos dentro del directorio del proyecto.
@@ -32,7 +34,8 @@ ________________________________________________________________________________
         _Si se siguieron todos los pasos el __FrontEnd__ deberia iniciarse sin problemas_
 
 - __BackEnd__.
-    - Precondiciones: 
+
+    Precondiciones: 
         **_Se recomienda testear el proyecto en localhost_**
         - __Si se usa en _localhost_ entonces:__
             - Se requiere una base de datos mysql llamada: "_apirest_".
@@ -53,6 +56,7 @@ ________________________________________________________________________________
             - Se requiere realizar una refactorizacion de lo "_endpoint_" en cualquier lugar donde este.
 
     __Iniciar el BackEnd del proyecto__.
+
     - El BackEnd se realizo con __Laravel__ y se encuentra almacenado en el directorio llamado "_Server_".
     - Para ejecutar el BackEnd debemos seguir los siguientes pasos:
         1. escribir "_cd Server_" en consola de comandos dentro del directorio del proyecto.
