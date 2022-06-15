@@ -64,7 +64,6 @@ ________________________________________________________________________________
         - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este.
 
     <br/>
-    <br/>
     __Iniciar el BackEnd del proyecto__.
 
     - El BackEnd se realizo con __Laravel__ y se encuentra almacenado en el directorio llamado "_Server_".
