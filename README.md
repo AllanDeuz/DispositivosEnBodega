@@ -77,7 +77,7 @@ ________________________________________________________________________________
 ______________________________________________________________________________________________________________________
 
 - __Consideraciones__.
-    - Se tomaron en cuenta las siguientes **entiedades** y **atributos** para modelar la base de datos:
+    - Se tomaron en cuenta las siguientes **entidades** y **atributos** para modelar la base de datos:
         - _Dispositivos (id, nombre, marca, modelo)_.
         - _Bodega (id, nombre)_.
     - Se considero que la relacion entre _Dispositivo_ y _Bodega_ es de **muchos a muchos**.
