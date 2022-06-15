@@ -46,7 +46,6 @@ ________________________________________________________________________________
         - Credenciales: username: _"root"_ y password: **Sin password**.
         <br/>
         <br/>
-        <br/>
         **Si se usara otra base de datos o se usan otras credenciales entonces:** <br/>
         - Dirigirse al archivo llamado __".env"__ en el directorio _"Server"_. <br/>
         - En el archivo __".env"__ se encuentra la siguiente informacion: <br/> 
