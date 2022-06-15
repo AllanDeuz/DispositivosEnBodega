@@ -24,6 +24,7 @@ Route::controller(DispositivosController::class)->group(function (){
     Route::get('modelos', 'modelos');
     Route::get('filtromodelo/{modelo}', 'filtroModelo');
     Route::get('/verbodega/{id}', 'estaBodega');
+    Route::get('/totalbodegas', 'cantidadEnBodega');
 });
 
 Route::controller(BodegaController::class)->group(function (){

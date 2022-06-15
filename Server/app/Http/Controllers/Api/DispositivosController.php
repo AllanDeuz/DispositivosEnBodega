@@ -162,4 +162,40 @@ class DispositivosController extends Controller
         $bodegaDispositivo = Dispositivos::find($id);
         return $bodegaDispositivo;
     }
+
+    public function cantidadEnBodega(){
+
+        $bodegas = Bodega::all();
+
+        $bodega1 = Bodega::find(1);
+        $bodega2 = Bodega::find(2);
+        $bodega3 = Bodega::find(3);
+
+        $cantidadBodega1 = BodegaDispositivo::where('bodega_id', 1)->count();
+        $cantidadBodega2 = BodegaDispositivo::where('bodega_id', 2)->count();
+        $cantidadBodega3 = BodegaDispositivo::where('bodega_id', 3)->count();
+
+        $cantidadBodega = [
+            $cantidadBodega1,
+            $cantidadBodega2,
+            $cantidadBodega3
+        ];
+
+        $totales = [];
+
+        foreach ($bodegas as $bodega) {
+            array_push($totales, $cantidadBodega[$bodega->id - 1]);
+        }
+
+        for ($i=0; $i < count($totales); $i++) { 
+            $totales[$i] = [
+                "id" => $bodegas[$i]->id,
+                "cantidad" => $totales[$i]
+            ];
+        }
+
+
+        return $totales;
+
+    }
 }
