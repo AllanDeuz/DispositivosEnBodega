@@ -58,7 +58,7 @@ ________________________________________________________________________________
         DB_PASSWORD=
         <br/>+--------------------------------+<br/>
 
-        3. En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular <br/>
+        3. En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular. <br/>
 
     - __Si se usa con un servidor externo entonces:__
         - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este. <br/>
