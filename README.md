@@ -60,8 +60,7 @@ ________________________________________________________________________________
     _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_ <br/>
 
     - __Si se usa con un servidor externo entonces:__
-        - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este. 
-    <br/> 
+        - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este. <br/>
     __Iniciar el BackEnd del proyecto__.
 
     - El BackEnd se realizo con __Laravel__ y se encuentra almacenado en el directorio llamado "_Server_".
