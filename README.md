@@ -2,8 +2,6 @@
 
 ## Test | Mundo
 
-**_Test de evaluación programador inicial_**
-
 ### Funcionalidades disponibles:
 
 - Ingresar un nuevo dispositivo al sistema.
@@ -82,5 +80,7 @@ ________________________________________________________________________________
     - _Bodega (id, nombre)_.
 - Se considero que la relacion entre _Dispositivo_ y _Bodega_ es de **muchos a muchos**.
 <br>
+
+**_Test de evaluación programador inicial_**
 
 _Desarrollador_ : **_Allan Arroyo Rodriguez_**.
