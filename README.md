@@ -57,8 +57,7 @@ ________________________________________________________________________________
         DB_USERNAME=root <br/>
         DB_PASSWORD=
         <br/>+--------------------------------+<br/>
-    _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_
-    <br/>
+    _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_ <br/>
 
     - __Si se usa con un servidor externo entonces:__
         - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este.
