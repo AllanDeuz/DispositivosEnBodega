@@ -67,8 +67,9 @@ ________________________________________________________________________________
     - El BackEnd se realizo con __Laravel__ y se encuentra almacenado en el directorio llamado "_Server_".
     - Para ejecutar el BackEnd debemos seguir los siguientes pasos:
         1. escribir "_cd Server_" en consola de comandos dentro del directorio del proyecto.
-        2. escribir "_php artisan migrate_" en consola de comandos dentro del directorio recien ingresado.
-        3. escribir "_php artisan serve_" en consola de comandos dentro del directorio actual.
+        2. escribir "_composer.phar install_" en consola de comandos dentro de "_Server_".
+        3. escribir "_php artisan migrate_" en consola de comandos dentro de "_Server_".
+        4. escribir "_php artisan serve_" en consola de comandos dentro de "_Server_".
 
         _Si se siguieron todos los pasos el __BackEnd__ deberia iniciarse sin problemas_
 
