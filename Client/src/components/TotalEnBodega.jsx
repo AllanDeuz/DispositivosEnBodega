@@ -18,7 +18,7 @@ const TotalEnBodega = () => {
 
     return (
         <div>
-            <h1>Total en bodega</h1>
+            <h1>Total de dispositivos en bodega</h1>
             <hr/>
             <table className="table table-striped">
                 <thead>
