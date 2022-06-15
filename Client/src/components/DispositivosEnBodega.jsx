@@ -74,10 +74,10 @@ const DispositivosEnBodega = () => {
             <div className='ingresarDisp'>
                 <ul className='accionesPrincipales'>
                     <li>
-                        <Link to="/ingresar" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo a Bodega</Link>
+                        <Link to="/ingresar-dispositivo" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Nuevo Dispositivo</Link>
                     </li>
                     <li>
-                        <Link to="/ingresar-dispositivo" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo</Link>
+                        <Link to="/ingresar" className="btn btn-success btn-lg mt-2 mb-2 text-white">Ingresar Dispositivo a Bodega</Link>
                     </li>
                 </ul>
             </div>

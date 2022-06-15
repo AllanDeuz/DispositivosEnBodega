@@ -53,6 +53,8 @@ select.form-control {
   -webkit-box-shadow: 9px 10px 5px 0px rgba(177, 194, 224, 0.808);
   -moz-box-shadow: 9px 10px 5px 0px rgba(177, 194, 224, 0.808);
   box-shadow: 9px 10px 5px 0px rgba(177, 194, 224, 0.808);
+  /*que el cursor apunte*/
+  cursor: pointer;
 
 }
 
