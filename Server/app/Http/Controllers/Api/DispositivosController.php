@@ -57,11 +57,6 @@ class DispositivosController extends Controller
         $bodegas = Bodega::all();
         $bodegaDispositivos = BodegaDispositivo::all();
 
-        //SELECT bodega_dispositivos.id, dispositivos.nombre, dispositivos.marca, dispositivos.modelo, bodega_dispositivos.bodegas_id 
-        //FROM bodegas, bodega_dispositivos, dispositivos
-        //WHERE bodegas.id = bodega_dispositivos.bodega_id
-        //AND dispositivos.id = bodega_dispositivos.dispositivo_id
-
         $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
         ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
         ->orderBy('dispositivos.nombre')
@@ -75,13 +70,6 @@ class DispositivosController extends Controller
         $bodegas = Bodega::all();
         $bodegaDispositivos = BodegaDispositivo::where('bodega_id', $bodega_id)->get();
 
-        //quiero los datos de los dispositivos que estan en la bodega que seleccione
-        //SELECT bodega_dispositivos.id, dispositivos.nombre, dispositivos.marca, dispositivos.modelo, bodega_dispositivos.bodegas_id
-        //FROM bodegas, bodega_dispositivos, dispositivos
-        //WHERE bodegas.id = bodega_dispositivos.bodega_id
-        //AND dispositivos.id = bodega_dispositivos.dispositivo_id
-        //AND bodega_dispositivos.bodega_id = $id
-
         $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
         ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
         ->where('bodega_dispositivos.bodega_id', $bodega_id)
@@ -94,13 +82,6 @@ class DispositivosController extends Controller
         $dispositivos = Dispositivos::where('marca', $marca)->get();
         $bodegas = Bodega::all();
         $bodegaDispositivos = BodegaDispositivo::all();
-
-        //quiero los datos de los dispositivos con marca = $marca que estan en la bodeda
-        //SELECT bodega_dispositivos.id, dispositivos.nombre, dispositivos.marca, dispositivos.modelo, bodega_dispositivos.bodegas_id
-        //FROM bodegas, bodega_dispositivos, dispositivos
-        //WHERE bodegas.id = bodega_dispositivos.bodega_id
-        //AND dispositivos.id = bodega_dispositivos.dispositivo_id
-        //AND dispositivos.marca = $marca
 
         $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
         ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
@@ -116,13 +97,6 @@ class DispositivosController extends Controller
         $bodegas = Bodega::all();
         $bodegaDispositivos = BodegaDispositivo::all();
 
-        //quiero los datos de los dispositivos con modelo = $modelo que estan en la bodeda
-        //SELECT bodega_dispositivos.id, dispositivos.nombre, dispositivos.marca, dispositivos.modelo, bodega_dispositivos.bodegas_id
-        //FROM bodegas, bodega_dispositivos, dispositivos
-        //WHERE bodegas.id = bodega_dispositivos.bodega_id
-        //AND dispositivos.id = bodega_dispositivos.dispositivo_id
-        //AND dispositivos.modelo = $modelo
-
         $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
         ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
         ->where('dispositivos.modelo', $modelo)
@@ -131,7 +105,7 @@ class DispositivosController extends Controller
         return $dispositivosEnBodega;
     }
 
-    //Seleccionar todas las marcas de los dispositivos
+    //Selecciona todas las marcas de los dispositivos
     public function marcas(){
 
         $marcas = Dispositivos::select('id', 'marca')->distinct()->orderBy('marca')->get();
@@ -158,7 +132,7 @@ class DispositivosController extends Controller
 
     }
 
-    //Seleccionar todos los modelos de los dispositivos
+    //Selecciona todos los modelos de los dispositivos
     public function modelos(){
         $modelos = Dispositivos::select('id', 'modelo')->distinct()->orderBy('modelo')->get();
 
