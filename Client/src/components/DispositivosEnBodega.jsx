@@ -146,7 +146,7 @@ const DispositivosEnBodega = () => {
 
                 <div className='tablaPrincipal'>
                     <hr/>
-                    <h1>Dispositivos en bodegas</h1>
+                    <h1>Dispositivos ingresados en bodegas</h1>
                     <br/>
 
                     <table className='table table-striped'>

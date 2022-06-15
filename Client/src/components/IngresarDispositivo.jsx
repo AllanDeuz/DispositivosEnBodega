@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import {useNavigate} from 'react-router-dom'
 import DispositivosIngresados from './DispositivosIngresados'
+import TotalEnBodega from './TotalEnBodega'
 
 const endpoint = 'http://localhost:8000/api'
 
@@ -38,7 +39,11 @@ const IngresarDispositivo = () => {
             dispositivo_id: dispositivo_id
         })
         dispositivosIngresados()
-        navigate('/')
+
+        navigate('/ingresar')
+
+        window.location.reload()
+
     }
 
     return (
@@ -73,6 +78,9 @@ const IngresarDispositivo = () => {
                 <button type="submit" className="btn btn-success">Ingresar</button>
 
             </form>
+            <hr/>
+            
+            <TotalEnBodega/>
             <hr/>
 
             <DispositivosIngresados/>

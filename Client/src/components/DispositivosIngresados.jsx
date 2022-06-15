@@ -25,7 +25,7 @@ const DispositivosIngresados = () => {
 
     return (
         <div>
-            <h1>Dispositivos ingresados</h1>
+            <h1>Dispositivos ingresados en sistema</h1>
 
             <br/>
 
