@@ -16,7 +16,6 @@ const TotalEnBodega = () => {
         getTotalBodegas()
     }, [])
 
-
     return (
         <div>
             <h1>Total en bodega</h1>
