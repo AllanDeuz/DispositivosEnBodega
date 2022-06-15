@@ -75,7 +75,7 @@ ________________________________________________________________________________
         _Si se siguieron todos los pasos el __BackEnd__ deberia iniciarse sin problemas_
 
 ______________________________________________________________________________________________________________________
-__Consideraciones__.
+### Consideraciones:
 
 - Se tomaron en cuenta las siguientes **entidades** y **atributos** para modelar la base de datos:
     - _Dispositivos (id, nombre, marca, modelo)_.
