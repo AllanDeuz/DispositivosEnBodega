@@ -75,13 +75,12 @@ ________________________________________________________________________________
         _Si se siguieron todos los pasos el __BackEnd__ deberia iniciarse sin problemas_
 
 ______________________________________________________________________________________________________________________
+__Consideraciones__.
 
-- __Consideraciones__.
-
-    - Se tomaron en cuenta las siguientes **entidades** y **atributos** para modelar la base de datos:
-        - _Dispositivos (id, nombre, marca, modelo)_.
-        - _Bodega (id, nombre)_.
-    - Se considero que la relacion entre _Dispositivo_ y _Bodega_ es de **muchos a muchos**.
+- Se tomaron en cuenta las siguientes **entidades** y **atributos** para modelar la base de datos:
+    - _Dispositivos (id, nombre, marca, modelo)_.
+    - _Bodega (id, nombre)_.
+- Se considero que la relacion entre _Dispositivo_ y _Bodega_ es de **muchos a muchos**.
 <br>
 
 _Desarrollador_ : **_Allan Arroyo Rodriguez_**.
