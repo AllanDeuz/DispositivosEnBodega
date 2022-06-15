@@ -79,7 +79,7 @@ ________________________________________________________________________________
     - Se tomaron en cuenta las siguientes **entiedades** y **atributos** para modelar la base de datos:
         - _Dispositivos (id, nombre, marca, modelo)_.
         - _Bodega (id, nombre)_.
-    - Se considera que la relacion entre _Dispositivo_ y _Bodega_ es de **muchos a muchos**.
+    - Se considero que la relacion entre _Dispositivo_ y _Bodega_ es de **muchos a muchos**.
 <br>
 
 _Desarrollador_ : **_Allan Arroyo Rodriguez_**.
