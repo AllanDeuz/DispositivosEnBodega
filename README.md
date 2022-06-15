@@ -46,8 +46,8 @@ ________________________________________________________________________________
         - Credenciales: username: _"root"_ y password: **Sin password**.
 
     - __Si se usara otra base de datos o se usan otras credenciales entonces:__ <br/>
-        - Dirigirse al archivo llamado __".env"__ en el directorio _"Server"_. <br/>
-        - En el archivo __".env"__ se encuentra la siguiente informacion: <br/> 
+        1. Dirigirse al archivo llamado __".env"__ en el directorio _"Server"_. <br/>
+        2. En el archivo __".env"__ se encuentra la siguiente informacion: <br/> 
 
         +---------------------------------+<br/>
         DB_CONNECTION=mysql <br/>
@@ -57,7 +57,7 @@ ________________________________________________________________________________
         DB_USERNAME=root <br/>
         DB_PASSWORD=
         <br/>+--------------------------------+<br/>
-    _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_ <br/>
+        3. En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular <br/>
 
     - __Si se usa con un servidor externo entonces:__
         - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este. <br/>
