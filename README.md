@@ -35,7 +35,7 @@ ________________________________________________________________________________
 
 - __BackEnd__.
 
-    -    __Precondiciones__: 
+    - __Precondiciones__: 
         <br/>
         <br/>
         _Se recomienda testear el proyecto en localhost_
@@ -50,17 +50,16 @@ ________________________________________________________________________________
         **Si se usara otra base de datos o se usan otras credenciales entonces:** <br/>
         - Dirigirse al archivo llamado __".env"__ en el directorio _"Server"_. <br/>
         - En el archivo __".env"__ se encuentra la siguiente informacion: <br/> 
-            
-        +---------------------+<br/>
-        DB_CONNECTION=mysql <br/>
-        DB_HOST=127.0.0.1 <br/>
-        DB_PORT=3306 <br/>
-        DB_DATABASE=apirest <br/>
-        DB_USERNAME=root <br/>
+
+        +---------------------+
+        DB_CONNECTION=mysql 
+        DB_HOST=127.0.0.1 
+        DB_PORT=3306 
+        DB_DATABASE=apirest 
+        DB_USERNAME=root 
         DB_PASSWORD=
-        <br/>+---------------------+<br/>
+        +---------------------+
         _En esa seccion se ingresarian las credenciales de la base de datos que se desea vincular_
-        <br/>
 
     - __Si se usa con un servidor externo entonces:__
         - Se requiere realizar una refactorizacion de los "_endpoint_" en cualquier lugar donde este.
