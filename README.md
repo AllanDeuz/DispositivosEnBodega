@@ -41,12 +41,12 @@ ________________________________________________________________________________
         _Se recomienda testear el proyecto en localhost_
         <br/>
         <br/>
-        __Si se usa en _localhost_ entonces:__ <br/>
+        - __Si se usa en _localhost_ entonces:__ <br/>
         - Se requiere una base de datos mysql llamada: _"apirest"_. <br/>
         - Credenciales: username: _"root"_ y password: **Sin password**.
         <br/>
         <br/>
-        **Si se usara otra base de datos o se usan otras credenciales entonces:** <br/>
+        - __Si se usara otra base de datos o se usan otras credenciales entonces:__ 
         - Dirigirse al archivo llamado __".env"__ en el directorio _"Server"_. <br/>
         - En el archivo __".env"__ se encuentra la siguiente informacion: <br/> 
 
