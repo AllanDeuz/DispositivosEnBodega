@@ -15,6 +15,7 @@
     - _El sistema detecta todas las bodegas, marcas y modelos ingresados en la base de datos y los enlista como opcion de filtro y de ingreso de dispositivo en bodega._
 - Eliminar dispositivo del sistema.
 - Eliminar dispositivo de una bodega.
+- Diseño responsivo.
 
 ______________________________________________________________________________________________________________________
 ### Partes del proyecto:
@@ -23,11 +24,11 @@ ________________________________________________________________________________
 
     __Iniciar el FrontEnd del proyecto__.
 
-    - El FrontEnd se realizo con __Reactjs__ y se encuentra almacenado en el directorio llamado "_Client_".
+    - El FrontEnd se realizo con __Reactjs__ y se encuentra almacenado en el directorio llamado _"Client"_.
     - Para ejecutar el FrontEnd debemos seguir los siguientes pasos:
-        1. escribir "_cd Client_" en consola de comandos dentro del directorio del proyecto.
-        2. escribir "_npm install_" en consola de comandos dentro de "_Client_".
-        3. escribir "_npm start_" en consola de comandos dentro de "_Client_".
+        1. escribir _"cd Client"_ en consola de comandos dentro del directorio del proyecto.
+        2. escribir _"npm install"_ en consola de comandos dentro de _"Client"_.
+        3. escribir _"npm start"_ en consola de comandos dentro de _"Client"_.
 
         _Si se siguieron todos los pasos el __FrontEnd__ deberia iniciarse sin problemas_
 
