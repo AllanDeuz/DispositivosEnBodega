@@ -59,7 +59,7 @@ class DispositivosController extends Controller
 
         $dispositivosEnBodega = Dispositivos::join("bodega_dispositivos", "dispositivos.id", "=", "bodega_dispositivos.dispositivo_id")
         ->select('bodega_dispositivos.id', 'bodega_dispositivos.dispositivo_id','dispositivos.nombre', 'dispositivos.marca', 'dispositivos.modelo', 'bodega_dispositivos.bodega_id')
-        ->orderBy('dispositivos.nombre')
+        ->orderBy('bodega_dispositivos.bodega_id')
         ->get();
 
         return $dispositivosEnBodega;
