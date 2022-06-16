@@ -61,7 +61,7 @@ const DispositivosIngresados = () => {
                         <td data-titulo="Marca">{dispositivo.marca}</td>
                         <td data-titulo="Modelo">{dispositivo.modelo}</td>
                         <td className='accion'>
-                            <button onClick={() => ingresoEnBodega(dispositivo.id)} className="btn btn-success">Ingreso rapido</button>
+                            <button onClick={() => ingresoEnBodega(dispositivo.id)} className="btn btn-success">Ingreso rápido</button>
                             <button onClick={() => deleteDispositivo(dispositivo.id)} className="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>
@@ -71,7 +71,6 @@ const DispositivosIngresados = () => {
             </table>
 
             <hr/>
-
             <Link to="/" className="btn btn-success btn-lg mt-2 mb-2 text-white" id="volverInicio">Volver al inicio</Link>
         </div>
     )

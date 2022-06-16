@@ -60,6 +60,7 @@ const DispositivosEnBodega = () => {
     const getModelos = async () => {
         const response = await axios.get(`${endpoint}/modelos`)
         setModelos(response.data)
+
     }
 
     useEffect(() => {
@@ -158,7 +159,7 @@ const DispositivosEnBodega = () => {
                                 <th>Marca</th>
                                 <th>Modelo</th>
                                 <th>Bodega</th>
-                                <th>Accion</th>
+                                <th>Acción</th>
                             </tr>
                         </thead>
 
