@@ -18,6 +18,18 @@ const DispositivosIngresados = () => {
         await axios.delete(`${endpoint}/dispositivo/${id}`)
         getDispositivos()
     }
+
+    const ingresoEnBodega = async (dispositivo_id) => {
+
+        await axios.post(`${endpoint}/enbodega`, {
+            bodega_id: 1,
+            dispositivo_id: dispositivo_id
+        })
+        getDispositivos()
+
+        window.location.reload()
+
+    }
     
     useEffect(() => {
         getDispositivos()
@@ -36,7 +48,7 @@ const DispositivosIngresados = () => {
                     <th>Nombre</th>
                     <th>Marca</th>
                     <th>Modelo</th>
-                    <th>Accion</th>
+                    <th>Acciones</th>
                 </tr>
                 </thead>
 
@@ -49,6 +61,7 @@ const DispositivosIngresados = () => {
                         <td data-titulo="Marca">{dispositivo.marca}</td>
                         <td data-titulo="Modelo">{dispositivo.modelo}</td>
                         <td className='accion'>
+                            <button onClick={() => ingresoEnBodega(dispositivo.id)} className="btn btn-success">Ingreso rapido</button>
                             <button onClick={() => deleteDispositivo(dispositivo.id)} className="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>
